@@ -1,29 +1,32 @@
 import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
+import { PremiumBackground } from "@/components/premium-background";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
 import { PostHogProvider } from "./providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
     template: "%s | La Macro",
-    default: "La Macro - Datos de la Macroeconomía Argentina",
+    default: "La Macro - Macroeconomía y Finanzas Argentinas",
   },
   description:
-    "Central de deudores, inflación, reservas, dólar, tasas, y calculadora de carry trade.",
+    "Plataforma profesional de análisis financiero y macroeconómico. Central de deudores, inflación, reservas, dólar, tasas, y calculadora de carry trade.",
   authors: [{ name: "Tomas Malamud" }],
   openGraph: {
     type: "website",
@@ -33,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "La Macro - Datos de la Macroeconomía Argentina",
+    title: "La Macro - Macroeconomía y Finanzas Argentinas",
     description:
-      "Central de deudores, inflación, reservas, dólar, tasas, y calculadora de carry trade.",
+      "Plataforma profesional de análisis financiero y macroeconómico. Central de deudores, inflación, reservas, dólar, tasas, y calculadora de carry trade.",
     creator: "@tomasmalamud",
   },
 };
@@ -56,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-100 dark:bg-background`}
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-gradient-to-br from-background via-background to-slate-50/30 dark:to-slate-900/30 min-h-screen`}
       >
         <PostHogProvider>
           <ThemeProvider
@@ -65,6 +68,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <PremiumBackground />
             <Navigation />
             {children}
             <Footer />

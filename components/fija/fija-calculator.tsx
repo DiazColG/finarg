@@ -445,7 +445,7 @@ export default function FijaCalculator({
                                   </div>
                                   <div className="flex flex-col gap-1">
                                     {option.limit && (
-                                      <div className="text-xs text-orange-600">
+                                      <div className="text-xs text-slate-600 dark:text-slate-400">
                                         Límite: ${formatNumber(option.limit)}
                                       </div>
                                     )}
@@ -555,7 +555,7 @@ export default function FijaCalculator({
                                   </div>
                                   <div className="flex flex-col gap-1">
                                     {option.limit && (
-                                      <div className="text-xs text-orange-600">
+                                      <div className="text-xs text-slate-600 dark:text-slate-400">
                                         Límite: ${formatNumber(option.limit)}
                                       </div>
                                     )}
@@ -800,7 +800,7 @@ export default function FijaCalculator({
             {calculations &&
               calculations.limitExceeded &&
               calculations.limitAmount && (
-                <Alert className="bg-orange-50 dark:bg-yellow-950 border border-orange-200 dark:border-yellow-800 rounded-lg p-3">
+                <Alert className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/50 rounded-lg p-3">
                   <AlertTitle>Ojo!</AlertTitle>
                   <AlertDescription>
                     {getAlternativeDisplayName(selectedAlternative)} tiene un

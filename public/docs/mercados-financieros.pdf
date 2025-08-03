@@ -1,0 +1,87 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog
+   /Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<< /Type /Pages
+   /Kids [3 0 R]
+   /Count 1
+>>
+endobj
+
+3 0 obj
+<< /Type /Page
+   /Parent 2 0 R
+   /Resources << /Font << /F1 4 0 R >>
+               >>
+   /MediaBox [0 0 612 792]
+   /Contents 5 0 R
+>>
+endobj
+
+4 0 obj
+<< /Type /Font
+   /Subtype /Type1
+   /BaseFont /Helvetica
+>>
+endobj
+
+5 0 obj
+<< /Length 676 >>
+stream
+BT
+/F1 24 Tf
+50 700 Td
+(Curso de Inversión Básica) Tj
+/F1 16 Tf
+0 -40 Td
+(Módulo 1: ¿Qué es un Mercado Financiero?) Tj
+/F1 12 Tf
+0 -30 Td
+(Por Dr. Ricardo Fernández, PhD en Economía Financiera) Tj
+/F1 12 Tf
+0 -40 Td
+(Contenido del Módulo:) Tj
+0 -20 Td
+(1. Definición y Conceptos Básicos) Tj
+0 -20 Td
+(2. Tipos de Mercados Financieros) Tj
+0 -20 Td
+(3. Participantes del Mercado Financiero) Tj
+0 -20 Td
+(4. Funciones de los Mercados Financieros) Tj
+0 -20 Td
+(5. El Sistema Financiero Argentino) Tj
+0 -20 Td
+(6. Importancia para los Inversores) Tj
+0 -20 Td
+(7. Cómo Empezar a Invertir en Argentina) Tj
+/F1 10 Tf
+0 -60 Td
+(Este PDF es un resumen del contenido completo disponible en la plataforma web.) Tj
+0 -20 Td
+(Para acceder al curso completo con todos los recursos y actividades interactivas,) Tj
+0 -15 Td
+(visite www.lamacro.com.ar/educacion/cursos/inversion-basica) Tj
+ET
+endstream
+endobj
+
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000058 00000 n
+0000000115 00000 n
+0000000241 00000 n
+0000000308 00000 n
+trailer
+<< /Size 6
+   /Root 1 0 R
+>>
+startxref
+1034
+%%EOF

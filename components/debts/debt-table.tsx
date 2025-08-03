@@ -80,15 +80,15 @@ function getSituacionColor(situacion: number | null): string {
     case 1:
       return "bg-green-100 text-green-800";
     case 2:
-      return "bg-yellow-100 text-yellow-800";
+      return "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300";
     case 3:
-      return "bg-orange-100 text-orange-800";
+      return "bg-slate-100 text-slate-800 dark:bg-slate-800/30 dark:text-slate-300";
     case 4:
       return "bg-red-100 text-red-800";
     case 5:
       return "bg-red-200 text-red-900";
     case 6:
-      return "bg-purple-100 text-purple-800";
+      return "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300";
     default:
       return "bg-gray-100";
   }
@@ -202,12 +202,12 @@ export default function DebtSection({
                         </span>
                       )}
                       {entidad.recategorizacionOblig && (
-                        <span className="px-2 py-1 bg-orange-100 text-orange-800 rounded-full text-xs">
+                        <span className="px-2 py-1 bg-slate-100 text-slate-800 dark:bg-slate-800/30 dark:text-slate-300 rounded-full text-xs">
                           Recategorizado
                         </span>
                       )}
                       {entidad.situacionJuridica && (
-                        <span className="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">
+                        <span className="px-2 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 rounded-full text-xs">
                           Situación Jurídica
                         </span>
                       )}
@@ -217,7 +217,7 @@ export default function DebtSection({
                         </span>
                       )}
                       {entidad.enRevision && (
-                        <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">
+                        <span className="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-xs">
                           En Revisión
                         </span>
                       )}

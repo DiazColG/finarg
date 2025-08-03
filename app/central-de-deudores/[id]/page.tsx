@@ -93,7 +93,7 @@ export default async function DebtorPage({
       {!hasData ? (
         <Card className="mb-6">
           <CardHeader>
-            <CardTitle className="text-amber-600">
+            <CardTitle className="text-blue-600 dark:text-blue-400">
               CUIT/CUIL no encontrado
             </CardTitle>
             <CardDescription>

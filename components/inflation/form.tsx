@@ -61,7 +61,7 @@ function ResponsiveSelect({
         value={value.toString()}
         onValueChange={(val) => onValueChange(parseInt(val))}
       >
-        <SelectTrigger className="w-32 dark:bg-black">
+        <SelectTrigger className="w-32 dark:bg-slate-900 bg-white border border-slate-300 dark:border-slate-600 focus:border-jpm-blue focus:ring-2 focus:ring-jpm-blue/20">
           <SelectValue placeholder={placeholder}>
             {options.find((opt) => opt.value === value)?.label}
           </SelectValue>
@@ -88,7 +88,7 @@ function ResponsiveSelect({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-32 justify-between"
+          className="w-32 justify-between bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 focus:border-jpm-blue focus:ring-2 focus:ring-jpm-blue/20"
           tabIndex={0}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
@@ -263,8 +263,8 @@ export function InflationForm({ inflationData }: InflationFormProps) {
 
   return (
     <>
-      <Card>
-        <CardContent className="p-4 text-center">
+      <Card className="border-2 border-transparent bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-900/50 dark:via-slate-800 dark:to-blue-950/30">
+        <CardContent className="p-6 text-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-lg border border-slate-200/50 dark:border-slate-800/50">
           <div className="space-y-6">
             {error && (
               <div className="text-red-500 font-medium text-sm">{error}</div>
@@ -272,9 +272,11 @@ export function InflationForm({ inflationData }: InflationFormProps) {
             <div className="flex flex-col items-center gap-4 text-lg">
               {/* First row */}
               <div className="flex flex-col md:flex-row items-center gap-2">
-                <span className="text-muted-foreground">Si compré algo a</span>
+                <span className="text-slate-600 dark:text-slate-400">
+                  Si compré algo a
+                </span>
                 <div className="relative w-48">
-                  <span className="absolute left-2 top-1/2 -translate-y-1/2 z-10">
+                  <span className="absolute left-2 top-1/2 -translate-y-1/2 z-10 text-slate-600 dark:text-slate-400">
                     $
                   </span>
                   <NumericInput
@@ -282,7 +284,7 @@ export function InflationForm({ inflationData }: InflationFormProps) {
                     onValueChange={(values) =>
                       setStartValue(values.floatValue || 0)
                     }
-                    className="pl-8 bg-white dark:bg-black font-medium"
+                    className="pl-8 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 font-medium focus:border-jpm-blue focus:ring-2 focus:ring-jpm-blue/20"
                     placeholder="0"
                     allowNegative={false}
                     decimalScale={2}
@@ -294,7 +296,7 @@ export function InflationForm({ inflationData }: InflationFormProps) {
 
               {/* Second row */}
               <div className="flex flex-col md:flex-row items-center gap-2">
-                <span className="text-muted-foreground">en</span>
+                <span className="text-slate-600 dark:text-slate-400">en</span>
                 <div className="flex gap-2">
                   <ResponsiveSelect
                     value={startMonth}
@@ -315,7 +317,9 @@ export function InflationForm({ inflationData }: InflationFormProps) {
 
               {/* Third row */}
               <div className="flex flex-col md:flex-row items-center gap-2">
-                <span className="text-muted-foreground">entonces en</span>
+                <span className="text-slate-600 dark:text-slate-400">
+                  entonces en
+                </span>
                 <div className="flex gap-2">
                   <ResponsiveSelect
                     value={endMonth}
@@ -335,11 +339,11 @@ export function InflationForm({ inflationData }: InflationFormProps) {
               </div>
 
               {result && result.totalIncrement > 0 && (
-                <div className="border-t flex flex-col md:flex-row pt-4 items-center gap-2 font-medium">
-                  <span className="text-muted-foreground">
+                <div className="border-t border-slate-200 dark:border-slate-700 flex flex-col md:flex-row pt-4 items-center gap-2 font-medium">
+                  <span className="text-slate-600 dark:text-slate-400">
                     ese mismo ítem valdría
                   </span>
-                  <span className="text-xl font-bold">
+                  <span className="text-xl font-bold text-jpm-blue dark:text-blue-400">
                     <NumberFlow
                       value={result.endValue}
                       locales="es-AR"

@@ -89,7 +89,7 @@ export default function DebtCheques({
                                 </span>
                               )}
                               {cheque.enRevision && (
-                                <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">
+                                <span className="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-xs">
                                   En Revisión
                                 </span>
                               )}
