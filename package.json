@@ -65,7 +65,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-hooks-extra": "^1.52.3",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.2",
+    "lint-staged": "^16.1.4",
     "postcss": "^8",
     "prettier": "3.6.2",
     "tailwindcss": "^4.1.11",
